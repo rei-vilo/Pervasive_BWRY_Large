@@ -180,6 +180,7 @@ void Pervasive_BWRY_Large::COG_initial()
     switch (u_eScreen_EPD)
     {
         case eScreen_EPD_969_QS_0B:
+
             b_sendCommandSelect8(0xa5, PANEL_CS_BOTH); //
             b_waitBusy();
             break;
