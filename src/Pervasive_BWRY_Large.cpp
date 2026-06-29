@@ -194,7 +194,6 @@ void Pervasive_BWRY_Large::COG_initial()
     b_sendCommandDataSelect8(0x01, COG_data[16], PANEL_CS_BOTH); // PWR
     b_sendIndexDataSelect(0x00, &COG_data[26], 3, PANEL_CS_BOTH); // PSR
     b_sendIndexDataSelect(0x61, &COG_data[19], 4, PANEL_CS_BOTH); // TRES
-    b_sendIndexDataSelect(0x61, &COG_data[19], 4, PANEL_CS_BOTH); // TRES
     uint8_t temphold[3] = {COG_data[17], COG_data[18], COG_data[29]};
     b_sendIndexDataSelect(0x00, &temphold[0], 3, PANEL_CS_BOTH); // PSR
     b_sendIndexDataSelect(0x06, &COG_data[23], 3, PANEL_CS_BOTH); // BTST_P
