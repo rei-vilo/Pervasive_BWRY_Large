@@ -171,12 +171,13 @@ void Pervasive_BWRY_Large::COG_getDataOTP()
 
 void Pervasive_BWRY_Large::COG_initial()
 {
-    b_sendCommandDataSelect8(0xe6, u_temperature, PANEL_CS_BOTH); //default is 25C but requires an external sensor for ambient temp
+    b_sendCommandDataSelect8(0xe6, u_temperature, PANEL_CS_BOTH); // 25 C temp
     b_sendCommandDataSelect8(0xe0, 0x02, PANEL_CS_BOTH); //
 
     switch (u_eScreen_EPD)
     {
         case eScreen_EPD_969_QS_0B:
+
             b_sendCommandSelect8(0xa5, PANEL_CS_BOTH); //
             b_waitBusy();
             break;
